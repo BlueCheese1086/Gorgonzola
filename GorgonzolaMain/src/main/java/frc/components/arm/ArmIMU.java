@@ -20,7 +20,7 @@ import frc.robot.Globals;
  * Add your docs here.
  */
 public class ArmIMU implements Component {
-    private PigeonIMU pidgey;
+    /*private PigeonIMU pidgey;
     private Shoulder shoulder;
     private InputManager im;
     private boolean imuOverride = false;
@@ -65,4 +65,5 @@ public class ArmIMU implements Component {
         }
         return false;// Math.toDegrees(angle)-getArmAngle()>Constants.ARM_EMERGENCY_THRESHOLD;
     }
+    */
 }

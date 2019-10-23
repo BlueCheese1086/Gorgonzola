@@ -41,7 +41,7 @@ public class Wrist implements Component {
             talon2.setInverted(false);
         } else {
             talon1.setInverted(true);
-            talon2.setInverted(false);
+            talon2.setInverted(true);
         }
         talon1.initEncoder(Constants.WRIST_KP, Constants.WRIST_KI, Constants.WRIST_KD, Constants.WRIST_KF);
 

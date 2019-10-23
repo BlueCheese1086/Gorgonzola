@@ -3,13 +3,13 @@ package frc.components.lights;
 import java.awt.Color;
 
 import frc.components.Component;
-import com.mach.LightDrive.*;
+//import com.mach.LightDrive.*;
 
 public class LightController implements Component {
-    private LightDriveCAN lDriveCAN;
+    //private LightDriveCAN lDriveCAN;
 
     public LightController() {
-        lDriveCAN = new LightDriveCAN();
+        //lDriveCAN = new LightDriveCAN();
     }
 
   /**
@@ -17,11 +17,11 @@ public class LightController implements Component {
    */
 
     public void setColor(int strip, int r, int g, int b) {
-        lDriveCAN.SetColor(strip, new Color(r, g, b));
+        //lDriveCAN.SetColor(strip, new Color(r, g, b));
     }
 
     public void setColor(int strip, Color color) {
-        lDriveCAN.SetColor(strip, color);
+        //lDriveCAN.SetColor(strip, color);
     }
 
   /**
@@ -29,7 +29,7 @@ public class LightController implements Component {
    */
     
     public void tick() {
-        lDriveCAN.Update();
+        //lDriveCAN.Update();
     }
 
 }

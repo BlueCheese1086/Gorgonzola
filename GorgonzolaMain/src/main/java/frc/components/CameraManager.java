@@ -79,10 +79,10 @@ public class CameraManager implements Component {
 
     public double getPrimarySightingAngle() throws Exception {
         try {
-            return cameraDataTable.get("Sighting " + getPrimarySighting()).getDoubleArray()[1];
+            return cameraDataTable.get("Sighting " + -getPrimarySighting()).getDoubleArray()[1];
         } catch (Exception e) {
             // e.printStackTrace();
-            return cameraDataTable.get("Sighting 0").getDoubleArray()[1];
+            return -cameraDataTable.get("Sighting 0").getDoubleArray()[1];
 
         }
     }

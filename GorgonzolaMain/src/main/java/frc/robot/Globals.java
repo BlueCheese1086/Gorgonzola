@@ -3,7 +3,7 @@ package frc.robot;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import com.mach.LightDrive.LightDriveCAN;
+//import com.mach.LightDrive.LightDriveCAN;
 
 import edu.wpi.first.wpilibj.Compressor;
 import frc.components.CameraManager;
@@ -30,7 +30,7 @@ import frc.components.pose.PoseTracker;
 public class Globals {
     public static boolean isNSP = false;
     public static boolean isAdelost = false;
-    public static boolean isProto = true;
+    public static boolean isProto = false;
 
     public static InputManager im;
     public static Drivetrain drivetrain;
@@ -39,7 +39,7 @@ public class Globals {
     public static LogInterface logger;
     public static PoseTracker poseTracker;
     public static GearShifter gearShifter;
-    public static LightDriveCAN lightController;
+    //public static LightDriveCAN lightController;
     public static Shoulder shoulder;
     public static Wrist wrist;
     public static Climber climber;
@@ -60,7 +60,7 @@ public class Globals {
         drivetrain = new Drivetrain();
         im = new InputManager();
         logger = new LogInterface();
-        lightController = new LightDriveCAN();
+        //lightController = new LightDriveCAN();
         compressor.setClosedLoopControl(true);
         intake = new Intake();
         gearShifter = new GearShifter();
@@ -92,7 +92,7 @@ public class Globals {
             }
         });
         try {
-            lightController.Update();
+            //lightController.Update();
             //System.out.println("lights updating");
         } catch (Exception e) {
             e.printStackTrace();

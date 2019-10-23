@@ -41,9 +41,9 @@ public class RocketPipeline implements Pipeline {
 	public ArrayList<Sighting> process(Mat source0) {
 		// Step HSV_Threshold0:
 		Mat hsvThresholdInput = source0;
-		double[] hsvThresholdHue = { 43.70503597122302, 76.96969696969695 };
-		double[] hsvThresholdSaturation = { 121.53776978417265, 255.0 };
-		double[] hsvThresholdValue = { 75.93842192433104, 255.0 };
+		double[] hsvThresholdHue = { 44, 88 };
+		double[] hsvThresholdSaturation = { 122, 255.0 };
+		double[] hsvThresholdValue = { 32, 116.0 };
 		hsvThreshold(hsvThresholdInput, hsvThresholdHue, hsvThresholdSaturation, hsvThresholdValue, hsvThresholdOutput);
 
 		// Step CV_erode0:
@@ -63,7 +63,7 @@ public class RocketPipeline implements Pipeline {
 
 		// Step Filter_Contours0:
 		ArrayList<MatOfPoint> filterContoursContours = findContoursOutput;
-		double filterContoursMinArea = 10.0;
+		double filterContoursMinArea = 20.0;
 		double filterContoursMinPerimeter = 0.0;
 		double filterContoursMinWidth = 0.0;
 		double filterContoursMaxWidth = 1000.0;

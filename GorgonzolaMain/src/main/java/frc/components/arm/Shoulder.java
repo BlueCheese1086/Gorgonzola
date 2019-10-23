@@ -67,7 +67,7 @@ public class Shoulder implements Component {
                         new Decimal(), new Decimal() },
                 new Loggable[] { () -> talon1.getEncoderVelocity(), () -> getHeight(), () -> heightSetpoint,
                         () -> talon1.talon.getMotorOutputPercent(), () -> talon1.talon.getClosedLoopError(),
-                        () -> talon1.talon.getClosedLoopTarget(), () -> talon1.getEncoderPosition(), ()->imu.getArmAngle() });
+                () -> talon1.talon.getClosedLoopTarget(), () -> talon1.getEncoderPosition()/*, ()->imu.getArmAngle() */});
         wrist = Globals.wrist;
     }
 
@@ -97,10 +97,10 @@ public class Shoulder implements Component {
             desiredPos = im.getArmPosition();
         }
 
-        if (imu.shouldIMUSave()) {
+        /*if (imu.shouldIMUSave()) {
             System.out.println("STOPPING ARM");
             //desiredPos = ArmHeight.NO_MOVEMENT;
-        }
+        }*/
         if (im.shoulderManual) {
             if (im.getArmSafetyButton()) {
                 talon1.set(ControlMode.PercentOutput, .025 + .5 * im.getShoulderManualHeight());
@@ -137,7 +137,7 @@ public class Shoulder implements Component {
                 setHeight(Constants.SHOULDER_MAX_POSITION + 5.0 * im.getShoulderManualHeight());
                 break;
             case GROUND_PICKUP:
-                setHeight(Constants.SHOULDER_MIN_POSITION + 5.0 + 5.0 * im.getShoulderManualHeight());
+                setHeight(Constants.SHOULDER_MIN_POSITION + 5.0 + 5.0 * im.getShoulderManualHeight() + 1.5);
                 break;
             case POSITION_MANUAL:
                 setHeight(Constants.SHOULDER_MIN_POSITION

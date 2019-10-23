@@ -19,7 +19,7 @@ public class Constants {
         public static final double SHOULDER_TICKS_PER_ROTATION = 1024.0;
         public static final double ARM_EMERGENCY_THRESHOLD = 20; //degrees
         public static final double ARM_IMU_OFFSET=0;
-        public static final double SHOULDER_ENCU_ZERO = Globals.isProto ? -522: -430;
+        public static final double SHOULDER_ENCU_ZERO = Globals.isProto ? -522: -477;
         public static final double SHOULDER_MIN_POSITION = 12; //inches
         public static final double SHOULDER_MAX_POSITION = 80;
         public static final double SHOULDER_MAX_VELOCITY = 55;

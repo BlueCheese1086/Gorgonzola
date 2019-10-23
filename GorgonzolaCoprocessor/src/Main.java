@@ -254,7 +254,7 @@ public final class Main {
 	SmartDashboard.putNumber("HORIZONTAL FOV", 60.0*Math.PI/180.0);
 	
 	CVCamera c = new CVCamera(50, 57.12*Math.PI/180.0, 54.0*Math.PI/180.0, 320, 240, 0,  6.125, 0, 0, 0);
-	c.initializeCamera(cameras.get(0), "CoprocessorCamera");
+	c.initializeCamera(cameras.get(1), "CoprocessorCamera");
 	c.addVisionTarget(target);
 	c.addPipeline(pipeline);
 	
